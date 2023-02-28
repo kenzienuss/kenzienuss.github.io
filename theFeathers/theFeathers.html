@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<h1>Some Memorable Movies</h1>
+	
+<h3><span class="ital">The Feathers</span> (Mackenzie Nuss, 2022)</h3>
+<div class="sideBySide">
+<img class="filmStill" onClick="onClick_DTRT_img01()" src="images/theFeathers1.jpg" alt="The Feathers">
+<img class="filmStill" onClick="onClick_DTRT_img02()" src="images/theFeathers2.jpg" alt="The Feathers">
+<img class="filmStill" onClick="onClick_DTRT_img03()" src="images/theFeathers3.jpg" alt="The Feathers">
+</div>
+<p class="filmInfo" id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nam quidem in, distinctio, exercitationem dolorum laudantium repudiandae est, voluptatem consequatur nostrum commodi perferendis. Sed distinctio at sint assumenda suscipit incidunt quasi quam accusantium iusto labore numquam nostrum aperiam possimus eligendi ducimus, facere dolores iste et voluptas repellendus, rerum architecto est!</p>
+
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie</button>
+	
+
+</body>
+<script>
+	
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+gotoMovie_btn.style.visibility = "hidden";
+	
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false;
+	
+	
+var DTRT_text = document.getElementById("DTRT_text");
+	
+var DTRT00 = "The Feathers is a film by Mackenzie Nuss. This film is about a girl that comes across a random SD card while on a walk. This made her curious as to what was on the SD card, whether it was meant to be found or not. She hurries inside to find that there was one singular picture on it that made her wounder if it meant more. She went to where she thought the picture was taken and found something she never thought she would find.";
+	
+var DTRT01 = "This photo is of when the girl first comes across the SD card. She hesitates for a second, but ultimately wanted to know what was on the SD card so she stops and picks it up. It looked like a regular SD card, nothing special but she finds out later that it was definately not an ordinary SD card."
+
+var DTRT02 = "In this photo, she had just come inside from her walk and hurried to her computer where she plugged in the SD card to see what was on it. When she opened the file on the computer it was just a singular picture of a feather in the sand. The only places around with sand was the beach, so she decided to go there."
+	
+var DTRT03 = "She printed out the picture and brought it to the beach with her, so maybe it could help her. She walks around the beach for a while trying to see if there is anything she could find that resembled anything close to the picture from the SD card. Eventually, she finds a feather sticking out of the sand and finds something crazy."
+
+
+DTRT_text.innerHTML = DTRT00; 
+	
+function onClick_DTRT_img01(){
+	DTRT_text.innerHTML = DTRT01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton();
+}
+function onClick_DTRT_img02(){
+	DTRT_text.innerHTML = DTRT02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+}
+function onClick_DTRT_img03(){
+	DTRT_text.innerHTML = DTRT03;
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+	
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible";
+	}
+}
+
+function revealbutton(){
+	if (img02_clicked){
+		console.log("REVEAL BUTTON");
+	}
+}
+	
+function revealbutton(){
+	if (img03_clicked){
+		console.log("REVEAL BUTTON");
+	}
+}
+	
+function gotoMovie(){
+	window.open("https://youtu.be/8gaG4IxLMFQ", "_blank");
+}
+	
+</script>
+</html>
