@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>collections</title>
+<link href="css/collections.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<div class="sideBySide">
+	
+<div>
+<video id="myDog1_vid" muted="muted" loop="loop" onClick="changeTopLeftText()" onMouseOver="playDog1_vid()" onMouseOut="pauseDog1_vid()" >
+<source src="videos/myDogVid1.mp4" type="video/mp4">
+</video>
+<p id="topLeftText">This is Woody, he is a mix of many different breeds and is two years old. He was rescued from the south and is now loved by everyone he ever meets.</p>
+</div>
+
+<div>
+<video id="myDog2_vid" muted="muted" loop="loop" onClick="changeTopMiddleText()" onMouseOver="playDog2_vid()" onMouseOut="pauseDog2_vid()" >
+<source src="videos/myDogVid2.mp4" type="video/mp4">
+</video>
+<p id="topMiddleText">Woody likes to pretend that the carpet is actually dirt and he can dig to find some sort of treats. He does this at least 4 times a day and still has found no treats but he will never give up. Maybe one day he will.</p>
+</div>
+	
+<div>
+<video id="myDog3_vid" muted="muted" loop="loop" onClick="changeTopRightText()" onMouseOver="playDog3_vid()" onMouseOut="pauseDog3_vid()" >
+<source src="videos/myDogVid3.mp4" type="video/mp4">
+</video>
+<p id="topRightText">These bones are Woody's favorite. His mom thought that since it was in a braid like state, it would last him a little bit longer to get undone, but she thought wrong. He has gotten these bones to a science and they are his favorite passing time.</p>
+</div>
+	
+</div>
+	
+<div class="sideBySide">
+<div>
+<video id="myDog4_vid" muted="muted" loop="loop" onClick="changeBottomLeftText()" onMouseOver="playDog4_vid()" onMouseOut="pauseDog4_vid()" >
+<source src="videos/myDogVid4.mp4" type="video/mp4">
+</video>
+<p id="bottomLeftText">Woody loves to lay on the couch with his mom at all times of the day. It might just be their favorite thing to do together. He will lay here and nap after his long walks or playing fetch in the backyard.</p>
+</div>
+
+<div>
+<video id="myDog5_vid" muted="muted" loop="loop" onClick="changeBottomMiddleText()" onMouseOver="playDog5_vid()" onMouseOut="pauseDog5_vid()" >
+<source src="videos/myDogVid5.mp4" type="video/mp4">
+</video>
+<p id="bottomMiddleText">Another one of Woody's favorite things to do is beg. No matter what it is, he will make sure he is right there at your feet asking for a piece. If you are lucky you will get a little drool too. </p>
+</div>
+	
+<div>
+<video id="myDog6_vid" muted="muted" loop="loop" onClick="changeBottomRightText()" onMouseOver="playDog6_vid()" onMouseOut="pauseDog6_vid()" >
+<source src="videos/myDogVid6.mp4" type="video/mp4">
+</video>
+<p id="bottomRightText">Lastly, what Woody is the best at, is being cute. No matter where we are or who we are with, somebody has to tell him how cute he is, his ego must be huge!</p>
+</div>
+	
+</div>
+	
+</body>
+	
+<script>
+	
+var myDog1_vid = document.getElementById("myDog1_vid")
+
+function playDog1_vid(){
+	myDog1_vid.play();
+}
+
+function pauseDog1_vid(){
+	myDog1_vid.pause();
+	topLeftText.innerHTML = "This is Woody, he is a mix of many different breeds and is two years old. He was rescued from the south and is now loved by everyone he ever meets.";
+}
+
+var myDog2_vid = document.getElementById("myDog2_vid")
+
+function playDog2_vid(){
+	myDog2_vid.play();
+}
+	
+function pauseDog2_vid(){
+	myDog2_vid.pause();
+	topMiddleText.innerHTML = "Woody likes to pretend that the carpet is actually dirt and he can dig to find some sort of treats. He does this at least 4 times a day and still has found no treats but will never give up. Maybe one day he will.";
+}
+	
+var myDog3_vid = document.getElementById("myDog3_vid")
+
+function playDog3_vid(){
+	myDog3_vid.play();
+}
+	
+function pauseDog3_vid(){
+	myDog3_vid.pause();
+	topRightText.innerHTML = "These bones are Woody's favorite. His mom thought that since it was in a braid like state, it would last him a little bit longer to get undone, but she thought wrong. He has gotton these bones down to a science and they are his favorite passing time";
+}
+	
+var myDog4_vid = document.getElementById("myDog4_vid")
+
+function playDog4_vid(){
+	myDog4_vid.play();
+}
+	
+function pauseDog4_vid(){
+	myDog4_vid.pause();
+	bottomLeftText.innerHTML = "Woody loves to lay on the couch with his mom at all times of the day. It might just be their favorite thing to do together. He will lay here and nap after his long walks or playing fetch in the backyard.";
+}
+	
+var myDog5_vid = document.getElementById("myDog5_vid")
+
+function playDog5_vid(){
+	myDog5_vid.play();
+}
+	
+function pauseDog5_vid(){
+	myDog5_vid.pause();
+	bottomMiddleText.innerHTML = "Another one of Woody's favorite things to do is beg. No matter what it is, he will make sure he is right there at your feet asking for a piece. If you are lucky you will get a little drool too";
+}
+	
+var myDog6_vid = document.getElementById("myDog6_vid")
+
+function playDog6_vid(){
+	myDog6_vid.play();
+}
+	
+function pauseDog6_vid(){
+	myDog6_vid.pause();
+	bottomRightText.innerHTML = "Lastly, what Woody is the best at, is being cute. No matter where we are or who we are with, somebody has to tell him how cute he is, his ego must be huge!";
+}
+	
+	
+	
+// TEXT
+
+var topLeftText = document.getElementById("topLeftText")
+topLeftText.innerHTML = "This is Woody, he is a mix of many different breeds and is two years old. He was rescued from the south and is now loved by everyone he ever meets";
+	
+function changeTopLeftText(){
+	topLeftText.innerHTML = "Many dogs are rescued from the south daily. A lot of rescue shelters in the midwest consist of dogs that are transported from the south to here."
+}
+
+
+var topMiddleText = document.getElementById("topMiddleText")
+topMiddleText.innerHTML = "Woody like to pretend that the carpet is actually dirt and he can dig to find some sort of treats. He does this at least 4 times a day and still has found no treats but he will never give up. Maybe one day he will.";
+	
+function changeTopMiddleText(){
+	topMiddleText.innerHTML = "You can tell that Woody even dreams about digging holes because his feet are always twitching in his sleep. Hopefully he finds what he is looking for!"
+}
+
+
+var topRightText = document.getElementById("topRightText")
+topRightText.innerHTML = "These bones are Woody's favorite. His mom thought that since it was in a braid like state, it would last him a little bit longer to get undone, butshe thought wrong. He has gotten these bones to a science and they are his favorite passing time.";
+	
+function changeTopRightText(){
+	topRightText.innerHTML = "When Woody is outside, instead of his favorite bone, he will find the best looking stick in the yard and spend the next five minutes chewing it into multiple little pieces."
+}
+
+var bottomLeftText = document.getElementById("bottomLeftText")
+bottomLeftText.innerHTML = "Woody loves to lay on the couch with his mom at all times of the day. It might just be their favorite thing to do together. He will lay here and nap after his long walks or playing fetch in the backyard.";
+	
+function changeBottomLeftText(){
+	bottomLeftText.innerHTML = "Since you just can not say no to that face, he spends little to no time on his own bed and most of his time on anyone else's bed or couch instead."
+}
+
+
+var bottomMiddleText = document.getElementById("bottomMiddleText")
+bottomMiddleText.innerHTML = "Another one of Woody's favorite things to do is beg. No matter what it is, he will make sure he is right there at your feet asking for a piece. If you are lucky you will get a little drool too.";
+
+function changeBottomMiddleText(){
+	bottomMiddleText.innerHTML = "Some of Woody's favorite foods to beg for carrots, any kind of fruit and on a good day maybe he will get a few white cheddar cheese its."
+}
+
+
+var bottomRightText = document.getElementById("bottomRightText")
+bottomRightText.innerHTML = "Lastly, what Woody is the best at, is being cute. No matter where we are or who we are with, somebody has to tell him how cute he is, his ego must be huge!";
+	
+function changeBottomRightText(){
+	bottomRightText.innerHTML = "Woody knows he is the cutest and can almost always tell when someone is giving him a compliment. Most of the time you will get a tail wag and even a smile!"
+}
+	
+</script>
+	
+	
+	
+	
+	
+</html>
