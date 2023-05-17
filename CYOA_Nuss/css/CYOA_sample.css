@@ -1,0 +1,19 @@
+@charset "utf-8";
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+.vidCenter {
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+#scene {
+	width: 100%;
+}
+
+
+video {
+	max-height: 600px;
+}
+ 
